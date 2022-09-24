@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMDrenchew's Method</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="elsenaju-Navigation.js"></script>
+    <script src="button.js"></script>
+    <script src="fn1.js"></script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+
+</head>
+
+<body> 
+    
+    <div class="center">
+        <header>
+            <h1>Qucik Solver</h1>
+            <hr>
+        </header>
+
+        <section>
+     
+            <h3>Quadratic Calculator</h3>
+            
+            <div class="theInput">
+
+                <input  id="a" placeholder="First coefficient">
+
+                <input id="b" placeholder="Second coefficient">
+
+                <input id="c" placeholder="Constant">
+
+                <br>
+        
+     
+                <button class = "glow-on-hover more" onclick="fn1()" > Solve </button> 
+        
+            
+                <div class="firstContainer">
+                <div id="result"></div>
+                <div id="result2">
+            
+                </div>
+    
+                </div>
+        
+        
+            </div>
+        
+
+
+        </section>
+
+            
+
+            <hr>
+    
+            <section>
+            <h3>Biquadratic Calculator</h3>
+            <div class="theInput">
+
+            <input id="a1" placeholder="First coefficient">
+
+            <input id="b1" placeholder="Second coefficient">
+
+            <input id="c1" placeholder="Constant">
+
+            <br>
+
+         <button class = "glow-on-hover more" onclick="fn2()" > Solve </button>
+    
+            <div class="firstContainer">
+            <div id="resultX1"></div>
+            <div id="resultX2"></div>
+            <div id="resultX3"></div>
+            <div id="resultX4"></div>
+            </div>
+
+            </div>
+        
+        </section>
+        
+        
+
+
+        <hr>
+
+        <section>
+
+            <h3>Herons Formula</h3>
+            <div class="theInput">
+
+            <input id="sideA" placeholder="Side A">
+
+         <input id="sideB" placeholder="Side B">
+
+         <input id="sideC" placeholder="Side C">
+
+         <br>
+        
+        
+
+            <!--<button class = "btn-3" onclick="fn3()" > Submit </button>-->
+            
+        
+            <select id="select1">
+    
+         <option value="mm">mm</option>
+          <option value="cm">cm</option>
+            <option value="m">m</option>
+            <option value="km">km</option>
+           </select>
+          <button class = "glow-on-hover more" onclick="fn3()" > Solve </button>
+        
+        
+          <div class="output"></div>
+    
+               
+           <div id="area">
+         </div>
+         </div>
+                
+        </section>
+        <hr>
+
+        <section>
+            <div id="MasterMitte" style="overflow-x:auto;">
+                <div class="box-2">
+                    <h3>Horner's method</h3>
+                    <div class="table" style="border-spacing: 0;">
+                        <div class="table-row" >
+                            <div class="table-cell" title="Click Here">
+                                <button class="glow-on-hover"  onfocus="this.select()" type="button" value="Calculation" onclick="Horner1()">Calculation</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table" style="border-spacing: 0;">
+                        <div class="table-row">
+                            <div class="table-cell" style="padding:1%;" title="Degree of the polynomial N">
+                                Degree of the polynomial N = <input onfocus="this.select()" type="number" id="n1" value="4" onchange="drawPoly2()" class="Eingabe">
+                            </div>
+                            <div class="table-cell" style="padding:1%;" title="x-value for the calculation of the polynomial value and the derivatives">
+                                Value at the position x = <input onfocus="this.select()" type="number" id="m1" value="1" onchange="drawPoly2()" class="Eingabe">
+                            </div>
+                        </div>
+                    </div>
+                    <p>Input of the coefficients of the polynomial p(x):</p>
+                    <div id="Polynom3"><div class="FormelBoxC"><input class="EingabePoly" onfocus="this.select()" type="number" id="P34"><span class="FormelBoxCLi">⋅x<sup>4</sup> + </span><input class="EingabePoly" onfocus="this.select()" type="number" id="P33"><span class="FormelBoxCLi">⋅x<sup>3</sup> + </span><input class="EingabePoly" onfocus="this.select()" type="number" id="P32"><span class="FormelBoxCLi">⋅x<sup>2</sup> + </span><input class="EingabePoly" onfocus="this.select()" type="number" id="P31"><span class="FormelBoxCLi">⋅x + </span><input class="EingabePoly" onfocus="this.select()" type="number" id="P30"></div></div>
+                </div>
+            </div>
+            <div id="MasterMitte" style="overflow-x:auto;">
+                <div class="box-2">
+                    <p>Horner scheme polynomial value and derivatives:</p>
+                    <div id="Horner2"><div class="table"><div class="table-row"><div class="table-cell"><p></p></div><div class="table-cell"><p>4</p></div><div class="table-cell"><p>3</p></div><div class="table-cell"><p>2</p></div><div class="table-cell"><p>1</p></div><div class="table-cell"><p>1</p></div></div><div class="table-row"><div class="table-cell"><p>1</p></div><div class="table-cell"><p></p></div><div class="table-cell"><p>4</p></div><div class="table-cell"><p>7</p></div><div class="table-cell"><p>9</p></div><div class="table-cell"><p>10</p></div></div><div class="table-row"><div class="table-cell"><p></p></div><div class="table-cell"><p>4</p></div><div class="table-cell"><p>7</p></div><div class="table-cell"><p>9</p></div><div class="table-cell"><p>10</p></div><div class="table-cell"><p style="color:green;font-weight: bold;">11</p></div></div><div class="table-row"><div class="table-cell"><p>1</p></div><div class="table-cell"><p></p></div><div class="table-cell"><p>4</p></div><div class="table-cell"><p>11</p></div><div class="table-cell"><p>20</p></div><div class="table-cell"><p></p></div></div><div class="table-row"><div class="table-cell"><p></p></div><div class="table-cell"><p>4</p></div><div class="table-cell"><p>11</p></div><div class="table-cell"><p>20</p></div><div class="table-cell"><p style="color:green;font-weight: bold;">30</p></div><div class="table-cell"><p></p></div></div><div class="table-row"><div class="table-cell"><p>1</p></div><div class="table-cell"><p></p></div><div class="table-cell"><p>4</p></div><div class="table-cell"><p>15</p></div><div class="table-cell"><p></p></div><div class="table-cell"><p></p></div></div><div class="table-row"><div class="table-cell"><p></p></div><div class="table-cell"><p>4</p></div><div class="table-cell"><p>15</p></div><div class="table-cell"><p style="color:green;font-weight: bold;">35</p></div><div class="table-cell"><p></p></div><div class="table-cell"><p></p></div></div><div class="table-row"><div class="table-cell"><p>1</p></div><div class="table-cell"><p></p></div><div class="table-cell"><p>4</p></div><div class="table-cell"><p></p></div><div class="table-cell"><p></p></div><div class="table-cell"><p></p></div></div><div class="table-row"><div class="table-cell"><p></p></div><div class="table-cell"><p>4</p></div><div class="table-cell"><p style="color:green;font-weight: bold;">19</p></div><div class="table-cell"><p></p></div><div class="table-cell"><p></p></div><div class="table-cell"><p></p></div></div><div class="table-row"><div class="table-cell"><p>1</p></div><div class="table-cell"><p></p></div><div class="table-cell"><p></p></div><div class="table-cell"><p></p></div><div class="table-cell"><p></p></div><div class="table-cell"><p></p></div></div><div class="table-row"><div class="table-cell"><p></p></div><div class="table-cell"><p style="color:green;font-weight: bold;">4</p></div><div class="table-cell"><p></p></div><div class="table-cell"><p></p></div><div class="table-cell"><p></p></div><div class="table-cell"><p></p></div></div></div></div>
+                </div>
+            </div>
+            
+                    
+                
+            </div>
+            </div>
+            
+            <script src="elsenaju-Navigation.js"></script>
+            <div id="cc--main" style="position: fixed; z-index: 1000000;" class="c--anim"><!--[if lt IE 9 ]><div id="cc_div" class="cc_div ie"></div><![endif]--><!--[if (gt IE 8)|!(IE)]><!-->
+            
+            <div id="s-cnt" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="s-ttl" style="visibility: hidden;"><div id="c-vln"><div id="cs"><div id="c-s-in"><div id="s-inr"><div id="s-hdr"><div id="s-ttl" role="heading">Cookie settings</div><div id="s-c-bnc"><button type="button" id="s-c-bn" class="c-bn" aria-label="Close"></button></div></div><div id="s-bl"><div class="c-bl"><div class="title"><div class="b-tl" role="heading" aria-level="3">Cookie use</div></div><div class="desc"><div class="p">The provision of the site is financed by advertising revenue. The ad providers set cookies for the selection of topic-specific or personalized ads.</div></div></div><div class="c-bl b-ex"><div class="title b-bn"><button type="button" class="b-tl" aria-expanded="false" aria-controls="c-ac-1">Necessary cookies</button><label class="b-tg"><input class="c-tgl" type="checkbox" value="necessary" disabled="" aria-readonly="true"><span class="c-tg c-ro" aria-hidden="true"><span class="on-i"></span><span class="off-i"></span></span><span class="t-lb">Necessary cookies</span></label></div><div class="desc b-acc" id="c-ac-1" aria-hidden="true"><div class="p">None are used</div></div></div><div class="c-bl b-ex"><div class="title b-bn"><button type="button" class="b-tl" aria-expanded="false" aria-controls="c-ac-2">Non Personalized Ads</button><label class="b-tg"><input class="c-tgl" type="checkbox" value="adsense"><span class="c-tg" aria-hidden="true"><span class="on-i"></span><span class="off-i"></span></span><span class="t-lb">Non Personalized Ads</span></label></div><div class="desc b-acc" id="c-ac-2" aria-hidden="true"><div class="p">Non-personalized themed Adsense ads</div></div></div><div class="c-bl b-ex"><div class="title b-bn"><button type="button" class="b-tl" aria-expanded="false" aria-controls="c-ac-3">Personalized ads</button><label class="b-tg"><input class="c-tgl" type="checkbox" value="adsense-personalisiert"><span class="c-tg" aria-hidden="true"><span class="on-i"></span><span class="off-i"></span></span><span class="t-lb">Personalized ads</span></label></div><div class="desc b-acc" id="c-ac-3" aria-hidden="true"><div class="p">Personalized Adsense ads</div></div></div></div><div id="s-bns"><button type="button" id="s-all-bn" class="c-bn">Accept all</button><button type="button" id="s-sv-bn" class="c-bn">Saving the settings</button></div></div></div></div></div></div>
+            <div id="cs-ov" style="visibility: hidden; opacity: 0;"></div>
+            <table cellspacing="0" cellpadding="0" role="presentation" class="gstl_50 gssb_c" style="width: 217px; display: none; top: 42px; position: absolute; left: 16px;"><tbody><tr><td class="gssb_f"></td><td class="gssb_e" style="width: 100%;"></td></tr></tbody></table>
+            <grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+            <style>
+                div.grammarly-desktop-integration {
+                  position: absolute;
+                  width: 1px;
+                  height: 1px;
+                  padding: 0;
+                  margin: -1px;
+                  overflow: hidden;
+                  clip: rect(0, 0, 0, 0);
+                  white-space: nowrap;
+                  border: 0;
+                  -moz-user-select: none;
+                  -webkit-user-select: none;
+                  -ms-user-select:none;
+                  user-select:none;
+                }
+              
+                div.grammarly-desktop-integration:before {
+                  content: attr(data-content);
+                }
+              </style><div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div>
+        
+        <div aria-label="grammarly-integration" role="group" tabindex="-1" class="grammarly-desktop-integration" data-content="{&quot;mode&quot;:&quot;full&quot;,&quot;isActive&quot;:true,&quot;isUserDisabled&quot;:false}"></div>
+         
+        </section>
+
+        <hr>
+
+    
+        
+    
+
+        <div class="heron">
+        <!--<img src="https://media.geeksforgeeks.org/wp-content/uploads/20210109124445/heron.jpg" width="150">-->
+    </div>
+    </div>
+    </div>
+        
+    <footer class="footer1">
+        <p class="center info">
+            <ion-icon name="logo-instagram"></ion-icon>
+            <a target="_blank" href="https://www.instagram.com/drenchew/" _blank>drenchew</a>
+            <br>
+            <ion-icon name="logo-facebook"></ion-icon>
+            <a target="_blank" href="https://www.facebook.com/alek.drenchev">Алек Дре</a>
+            <br>
+            <ion-icon name="logo-github"></ion-icon>
+            <a target="_blank" href="https://github.com/drenchew/quadraticCalc.com">drenchew</a>
+            <br>
+            © all copyrights reserved
+            
+            
+        </p>
+        <hr>
+
+       
+
+
+    </footer>
+    
+</body>
+
+</html>
